@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/api/v1/health"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"message\": \"Hello from mocked api via wiremock!\", \"time\": \"{{now}}\"}",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformers": ["response-template"]
+  }
+}
