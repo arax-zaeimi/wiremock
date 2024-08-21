@@ -2,10 +2,10 @@
 
 A simple repo to spin a wiremock server and map the local directory for stored mappings.
 
-To spin the wiremock server, use the following command:
+Use the following command to start a wiremock server with te APIs already imported from local directory 'mappings'.
 
 ```
 docker-compose up -d
 ```
 
-Each mocked API has to be defiend ONLY in one json file. Wiremock cannot process array of mock definitions in one json file.
+APIs are available at http://localhost:8080. You can configure the `docker-compose` file to change the port or mappings directory.

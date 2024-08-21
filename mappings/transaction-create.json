@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/api/v1/transaction"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{\"referenceNumber\":\"{{jsonPath request.body '$.referenceNumber'}}\",\"transactionId\":\"{{randomValue length=18 type='NUMERIC'}}\",\"status\":\"accepted\",\"transactionDate\": \"{{now format='yyyy-MM-dd HH:mm:ssZ'}}\",\"transactionFlow\": \"{{jsonPath request.body '$.transactionFlow'}}\",\"amountInCents\": \"{{jsonPath request.body '$.amountInCents'}}\"}",
+    "transformers": ["response-template"]
+  }
+}
